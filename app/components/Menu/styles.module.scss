@@ -1,0 +1,79 @@
+@import "../../../node_modules/rfs/scss";
+
+//.logo {
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  z-index: 4;
+//  margin-top: 20px;
+//  margin-left: 20px;
+//  display: flex;
+//  flex-wrap: wrap;
+//  justify-content: center;
+//  align-content: center;
+//  mix-blend-mode: difference;
+//  min-width: 60px;
+//}
+
+.button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  mix-blend-mode: difference;
+  margin-top: 10px;
+  margin-right: 20px;
+  z-index: 4;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border 0.3s 0.3s;
+
+  .burger {
+    width: 100%;
+
+    &::after, &::before {
+      content: "";
+      display: block;
+      width: 40%;
+      height: 2px;
+      background-color: var(--background-color-var);
+      margin: auto;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    &::after {
+      top: -5px;
+    }
+
+    &::before {
+      top: 5px;
+    }
+  }
+
+  &:has(.burgerActive) {
+    border: 2px solid var(--background-color-var);
+    transition-property: initial;
+    transition-duration: initial;
+  }
+
+  .burgerActive {
+    &::after, &::before {
+      background-color: var(--background-color-var);
+    }
+
+    &::after {
+      top: -1px;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}

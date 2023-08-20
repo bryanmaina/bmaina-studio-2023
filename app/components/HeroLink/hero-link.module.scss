@@ -1,0 +1,27 @@
+$text-opacity: 1;
+$text-color: rgb(163, 163, 163, $text-opacity);
+$text-color-hover: white;
+//$text-color-hover: rgb(241, 146, 60, $text-opacity);
+
+.link {
+  pointer-events: auto;
+  //margin: 3rem;
+  display: flex;
+  justify-items: flex-end;
+  //width: 10ch;
+  //justify-content: center;
+  //border-width: 4px;
+  //border-color: $text-color;
+  //padding-top: 0.75rem;
+  //padding-bottom: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $text-color;
+  gap: 0.5ch;
+
+  &:hover {
+    color: $text-color-hover;
+  }
+}

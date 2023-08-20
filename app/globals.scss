@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../node_modules/rfs/scss";
+
+html,
+body,
+:root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+::-webkit-scrollbar {
+  @include rfs(0.3rem, width);
+  z-index: 10;
+}
+
+::-webkit-scrollbar-track {
+  //border: 1px solid rgba(46, 139, 87, 0.5);
+  box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #3636af, seagreen);
+  border-radius: 3px;
+}
