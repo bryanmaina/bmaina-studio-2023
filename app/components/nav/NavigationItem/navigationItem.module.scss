@@ -1,0 +1,39 @@
+@import "../../../../node_modules/rfs/scss";
+
+.body {
+  height: 100%;
+  overflow: hidden;
+  perspective: 60vw;
+  transform-origin: top;
+  box-sizing: border-box;
+
+  .becky {
+    mix-blend-mode: difference;
+    pointer-events: none;
+    position: absolute;
+    will-change: top;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    width: 100%;
+  }
+
+  .element {
+    p {
+      -webkit-writing-mode: vertical-lr;
+      -moz-writing-mode: vertical-lr;
+      -ms-writing-mode: vertical-lr;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+    }
+
+
+    @include font-size(1.2rem);
+    font-weight: 600;
+    color: #fffa9b;
+    height: 100%;
+    width: fit-content;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+}

@@ -39,20 +39,17 @@ export default function HeroCanvas() {
     const {viewport} = useThree();
 
     useFrame(() => {
-        console.log("viewport height:", viewport.height);
         if (textRef.current) {
-            textRef.current.position.setY(-(scroll.range(0, 1 / 5) * (viewport.height * 20)));
+            textRef.current.position.setY(-(scroll.range(0, 1.5 / 5) * (viewport.height * 20)));
         }
     });
 
-    return (
-        <>
-            <Text ref={textRef} castShadow={false} receiveShadow={false} color={"black"}
-                  letterSpacing={-0.025} fontSize={14} position={[0, 0, -10]}>
-                MAIN( ).STUDIO
-            </Text>
-            {/*<TriaLogo scale={30} config={config}/>*/}
-            <DevsCare scale={45} config={config} position={[0, -4, 0]}/>
-        </>
-    );
+    return (<>
+        <Text ref={textRef} castShadow={false} receiveShadow={false} color={"black"}
+              letterSpacing={-0.025} fontSize={14} position={[0, 0, -10]}>
+            MAIN( ).STUDIO
+        </Text>
+        {/*<TriaLogo scale={30} config={config}/>*/}
+        <DevsCare scale={45} config={config} position={[0, -4, 0]}/>
+    </>);
 }
