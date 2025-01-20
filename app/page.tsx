@@ -49,14 +49,14 @@ export default function Home() {
                     <Scroll>
                         {/*    <Overlay/>*/}
                         <HeroCanvas/>
-                        <AboutCanvas/>
+                        {/* <AboutCanvas/> */}
                     </Scroll>
-                    <Scroll html={true}>
+                    {/* <Scroll html={true}>
                         <RecoilRoot>
-                            <HeroHtml/>
+                            <HeroHtml/> 
                             <AboutHtml/>
                         </RecoilRoot>
-                    </Scroll>
+                    </Scroll> */}
                 </ScrollControls>
                 <Effects degraded={degraded}/>
                 <Rig/>
@@ -65,7 +65,7 @@ export default function Home() {
                 </Environment>
             </Canvas>
             {/*<Menu accentColor={"#a5a5a5"}/>*/}
-            <Navigation/>
+            {/* <Navigation/> */}
         </Suspense>
         <Loader
             dataInterpolation={(p) => `Loading ${p.toFixed(2)}%`} // Text
